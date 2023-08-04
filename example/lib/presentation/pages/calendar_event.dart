@@ -4,7 +4,7 @@ import 'package:collection/collection.dart';
 import 'package:device_calendar/device_calendar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_native_timezone/flutter_native_timezone.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:intl/intl.dart';
 
 import '../date_time_picker.dart';
@@ -70,7 +70,7 @@ class _CalendarEventPageState extends State<CalendarEventPage> {
 
   void getCurentLocation() async {
     try {
-      _timezone = await FlutterNativeTimezone.getLocalTimezone();
+      _timezone = await FlutterTimezone.getLocalTimezone();
     } catch (e) {
       debugPrint('Could not get the local timezone');
     }
